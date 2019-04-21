@@ -7,10 +7,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class firstblock extends AppCompatActivity {
 
@@ -20,6 +22,19 @@ public class firstblock extends AppCompatActivity {
         setContentView(R.layout.activity_firstblock);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        try {
+            CounterClass counterClass = CounterClass.getInstance();
+            Log.i("TAG 222", counterClass.getFormatedTime());
+        } catch (Exception e) {
+            e.printStackTrace();
+            // counter class is not initiated , access initInstance
+        }
+
+        CounterClass counterClass = CounterClass.initInstance(30000, 1000);
+        counterClass.start();
+        TextView timer = (TextView)findViewById(R.id.Timer);
+        timer.setText(counterClass.getFormatedTime());
 
         final EditText edit = (EditText)findViewById(R.id.editText2);
 
