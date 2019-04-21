@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".secondblock"
+            android:label="@string/title_activity_secondblock"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".firstblock"
             android:label="@string/title_activity_firstblock"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".spatialActivity"
             android:label="@string/title_activity_spatial"

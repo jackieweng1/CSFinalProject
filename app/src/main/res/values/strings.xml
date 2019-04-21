@@ -9,4 +9,6 @@
     <string name="warning">*THERE ARE NO FLOATING BLOCKS!*</string>
     <string name="title_activity_block1">Block1</string>
     <string name="title_activity_firstblock">firstblock</string>
+    <string name="SUBMIT">SUBMIT</string>
+    <string name="title_activity_secondblock">secondblock</string>
 </resources>
