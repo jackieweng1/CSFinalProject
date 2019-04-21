@@ -3,7 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="Start_Game">Start Game</string>
     <string name="title_activity_spatial">Spatial Reasoning</string>
-    <string name="TextView">You will have 30 seconds to complete as many of the following problems as possible. Simply choose the number of blocks in each model. The more you get correct, the harder the models become!</string>
+    <string name="TextView">Count the blocks! Good Luck.</string>
     <string name="SPATIALREASONING">SPATIAL REASONING</string>
     <string name="Begin">BEGIN!</string>
     <string name="warning">*THERE ARE NO FLOATING BLOCKS!*</string>
@@ -12,4 +12,5 @@
     <string name="SUBMIT">SUBMIT</string>
     <string name="title_activity_secondblock">secondblock</string>
     <string name="Timer">timer</string>
+    <string name="title_activity_thirdblock">thirdblock</string>
 </resources>

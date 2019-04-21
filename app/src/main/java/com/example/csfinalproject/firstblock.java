@@ -1,7 +1,9 @@
 package com.example.csfinalproject;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,16 +14,16 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class firstblock extends AppCompatActivity {
+public class firstblock extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstblock);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         try {
             CounterClass counterClass = CounterClass.getInstance();
@@ -31,25 +33,53 @@ public class firstblock extends AppCompatActivity {
             // counter class is not initiated , access initInstance
         }
 
-        CounterClass counterClass = CounterClass.initInstance(30000, 1000);
+        final CounterClass counterClass = CounterClass.initInstance(30000, 1000);
         counterClass.start();
-        TextView timer = (TextView)findViewById(R.id.Timer);
-        timer.setText(counterClass.getFormatedTime());
+        final TextView pointcount = (TextView)findViewById(R.id.Timer);
+        final String points2 = "Points: " + Double.toString(points);
+        pointcount.setText(points2);
 
         final EditText edit = (EditText)findViewById(R.id.editText2);
+        final ImageView b4 = (ImageView)findViewById(R.id.block4);
+        final ImageView b5 = (ImageView)findViewById(R.id.block5);
+        final ImageView b6 = (ImageView)findViewById(R.id.block6);
+        final ImageView b7 = (ImageView)findViewById(R.id.block7);
+        final ImageView b8 = (ImageView)findViewById(R.id.block8);
+        final ImageView b9 = (ImageView)findViewById(R.id.block9);
+        final ImageView b10 = (ImageView)findViewById(R.id.block10);
+        final ImageView b12 = (ImageView)findViewById(R.id.block12);
+        final ImageView b12s = (ImageView)findViewById(R.id.block12s);
+        final ImageView b16 = (ImageView)findViewById(R.id.block16);
+        final ImageView b16s = (ImageView)findViewById(R.id.block16s);
 
+        final ImageView[] blocks = new ImageView[] {b4, b5, b6, b7, b8, b9, b10, b12, b12s, b16, b16s};
+        final int[] block = {R.drawable.fourblock, R.drawable.fiveblock, R.drawable.sixblock, R.drawable.sevenblock, R.drawable.eightblock,
+            R.drawable.nineblock, R.drawable.tenblock, R.drawable.twelveblock, R.drawable.twelveblocksss, R.drawable.sixteenblocksss, R.drawable.sixteenblock};
+        final String[] answer = {"4", "5", "6", "7", "8", "9", "10", "12", "12", "16", "16"};
         final Button submit = (Button)findViewById(R.id.button4);
-        submit.setOnClickListener(new View.OnClickListener(){
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final String value = edit.getText().toString();
-                if (!(value.equals("6"))) {
-                    edit.setError("That is incorrect!");
+                points = 0;
+                blocks[blockcount].setVisibility(View.VISIBLE);
+                if (blockcount != 0) {
+                    blocks[blockcount - 1].setVisibility(View.INVISIBLE);
+                }
+                if (!(value.equals(answer[blockcount]))) {
+                    edit.setError("Incorrect! You lost points!");
+                    points -= pointcount(blockcount);
+                    blockcount++;
+                    edit.setText("");
                 } else {
-                    startActivity(new Intent(firstblock.this, secondblock.class));
+                    points += pointcount(blockcount);
+                    blockcount++;
+                    edit.setText("");
                 }
             }
-        });
+            });
+
+
 
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED,0);
