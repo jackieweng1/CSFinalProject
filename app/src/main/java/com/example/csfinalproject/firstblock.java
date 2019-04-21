@@ -22,12 +22,12 @@ public class firstblock extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         final EditText edit = (EditText)findViewById(R.id.editText2);
-        final String value = edit.getText().toString();
 
         final Button submit = (Button)findViewById(R.id.button4);
         submit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                final String value = edit.getText().toString();
                 if (!(value.equals("6"))) {
                     edit.setError("That is incorrect!");
                 } else {
