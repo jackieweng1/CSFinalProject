@@ -19,6 +19,17 @@ import android.widget.TextView;
 
 public class firstblock extends BaseActivity {
 
+    public int pointcount(int index) {
+        if (index >= 0 && index <= 3) {
+            return 1;
+        } else if (index >= 4 && index <= 6) {
+            return 2;
+        } else if (index >= 7 && index <= 9) {
+            return 3;
+        } else {
+            return 4;
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +46,9 @@ public class firstblock extends BaseActivity {
 
         final CounterClass counterClass = CounterClass.initInstance(30000, 1000);
         counterClass.start();
-        final TextView pointcount = (TextView)findViewById(R.id.Timer);
-        final String points2 = "Points: " + Double.toString(points);
-        pointcount.setText(points2);
+        final TextView pointtotal = (TextView)findViewById(R.id.Timer);
+        //final String points2 = "Points: " + Double.toString(points);
+        pointtotal.setText("Points " + Double.toString(points));
 
         final EditText edit = (EditText)findViewById(R.id.editText2);
         final ImageView b4 = (ImageView)findViewById(R.id.block4);
@@ -53,28 +64,32 @@ public class firstblock extends BaseActivity {
         final ImageView b16s = (ImageView)findViewById(R.id.block16s);
 
         final ImageView[] blocks = new ImageView[] {b4, b5, b6, b7, b8, b9, b10, b12, b12s, b16, b16s};
-        final int[] block = {R.drawable.fourblock, R.drawable.fiveblock, R.drawable.sixblock, R.drawable.sevenblock, R.drawable.eightblock,
-            R.drawable.nineblock, R.drawable.tenblock, R.drawable.twelveblock, R.drawable.twelveblocksss, R.drawable.sixteenblocksss, R.drawable.sixteenblock};
+        //final int[] block = {R.drawable.fourblock, R.drawable.fiveblock, R.drawable.sixblock, R.drawable.sevenblock, R.drawable.eightblock,
+        //    R.drawable.nineblock, R.drawable.tenblock, R.drawable.twelveblock, R.drawable.twelveblocksss, R.drawable.sixteenblocksss, R.drawable.sixteenblock};
         final String[] answer = {"4", "5", "6", "7", "8", "9", "10", "12", "12", "16", "16"};
         final Button submit = (Button)findViewById(R.id.button4);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //add error if empty
                 final String value = edit.getText().toString();
-                points = 0;
+                //points = 0;
+                //set image using an imageview
                 blocks[blockcount].setVisibility(View.VISIBLE);
                 if (blockcount != 0) {
                     blocks[blockcount - 1].setVisibility(View.INVISIBLE);
                 }
-                if (!(value.equals(answer[blockcount]))) {
+                if (value.equals(answer[blockcount])){
+                    points += pointcount(blockcount);
+                    blockcount++;
+                    edit.setText("");
+                    pointtotal.setText("Points: " + String.valueOf(points));
+                } else {
                     edit.setError("Incorrect! You lost points!");
                     points -= pointcount(blockcount);
                     blockcount++;
                     edit.setText("");
-                } else {
-                    points += pointcount(blockcount);
-                    blockcount++;
-                    edit.setText("");
+                    pointtotal.setText("Points: " + String.valueOf(points));
                 }
             }
             });
