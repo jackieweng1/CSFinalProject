@@ -6,7 +6,7 @@
     <string name="TextView">Count the blocks! Good Luck.</string>
     <string name="SPATIALREASONING">SPATIAL REASONING</string>
     <string name="Begin">BEGIN!</string>
-    <string name="warning">*THERE ARE NO FLOATING BLOCKS!*</string>
+    <string name="warning">*THERE ARE NO HIDDEN BLOCKS!*</string>
     <string name="title_activity_block1">Block1</string>
     <string name="title_activity_firstblock">firstblock</string>
     <string name="SUBMIT">SUBMIT</string>
