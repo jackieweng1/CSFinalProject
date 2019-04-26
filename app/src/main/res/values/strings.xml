@@ -6,7 +6,7 @@
     <string name="TextView">Count the blocks! Good Luck.</string>
     <string name="SPATIALREASONING">SPATIAL REASONING</string>
     <string name="Begin">BEGIN!</string>
-    <string name="warning">*THERE ARE NO HIDDEN BLOCKS!*</string>
+    <string name="warning">*Collect as much Points as you can!*</string>
     <string name="title_activity_block1">Block1</string>
     <string name="title_activity_firstblock">firstblock</string>
     <string name="SUBMIT">SUBMIT</string>
@@ -14,4 +14,9 @@
     <string name="Timer">timer</string>
     <string name="title_activity_thirdblock">thirdblock</string>
     <string name="title_activity_math">math</string>
+    <string name="questions">The following questions are far more tricky. Read the instructions carefully! Enter the letter of the correct answer! Each one is worth a whopping four points. </string>
+    <string name="title_activity_math2">math2</string>
+    <string name="title_activity_math3">math3</string>
+    <string name="title_activity_instructions">instructions</string>
+    <string name="title_activity_results">results</string>
 </resources>

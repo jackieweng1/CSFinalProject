@@ -9,20 +9,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class math extends AppCompatActivity {
+public class instructions extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_math);
+        setContentView(R.layout.activity_instructions);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        final Button submit = (Button)findViewById(R.id.button3);
-        submit.setOnClickListener(new View.OnClickListener() {
+        Button begin = (Button)findViewById(R.id.begin);
+        begin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(math.this, math2.class));
+                startActivity(new Intent(instructions.this, math3.class));
             }
         });
     }

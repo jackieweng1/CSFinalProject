@@ -9,7 +9,7 @@
     tools:showIn="@layout/activity_firstblock">
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edit"
         android:layout_width="116dp"
         android:layout_height="46dp"
         android:layout_marginTop="5dp"
@@ -31,7 +31,7 @@
         android:layout_marginBottom="36dp"
         android:onClick="secondblock"
         android:text="@string/SUBMIT"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

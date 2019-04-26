@@ -1,14 +1,10 @@
 package com.example.csfinalproject;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -51,7 +47,7 @@ public class firstblock extends BaseActivity {
         //final String points2 = "Points: " + Double.toString(points);
         pointtotal.setText("Points " + Double.toString(points));
 
-        final EditText edit = (EditText)findViewById(R.id.editText2);
+        final EditText edit = (EditText)findViewById(R.id.edit);
         final ImageView b4 = (ImageView)findViewById(R.id.block4);
         final ImageView b5 = (ImageView)findViewById(R.id.block5);
         final ImageView b6 = (ImageView)findViewById(R.id.block6);
@@ -65,8 +61,8 @@ public class firstblock extends BaseActivity {
         final ImageView b16s = (ImageView)findViewById(R.id.block16s);
 
         final ImageView[] blocks = new ImageView[] {b4, b5, b6, b7, b8, b9, b10, b12, b12s, b16, b16s, b16s};
-        final int[] block = {R.drawable.fourblock, R.drawable.fiveblock, R.drawable.sixblock, R.drawable.sevenblock, R.drawable.eightblock,
-            R.drawable.nineblock, R.drawable.tenblock, R.drawable.twelveblock, R.drawable.twelveblocksss, R.drawable.sixteenblocksss, R.drawable.sixteenblock};
+        //final int[] block = {R.drawable.fourblock, R.drawable.fiveblock, R.drawable.sixblock, R.drawable.sevenblock, R.drawable.eightblock,
+            //R.drawable.nineblock, R.drawable.tenblock, R.drawable.twelveblock, R.drawable.twelveblocksss, R.drawable.sixteenblocksss, R.drawable.sixteenblock};
         final String[] answer = {"4", "5", "6", "7", "8", "9", "10", "12", "12", "16", "16", "16"};
         final Button submit = (Button)findViewById(R.id.button4);
         submit.setOnClickListener(new View.OnClickListener() {
