@@ -64,10 +64,10 @@ public class firstblock extends BaseActivity {
         final ImageView b16 = (ImageView)findViewById(R.id.block16);
         final ImageView b16s = (ImageView)findViewById(R.id.block16s);
 
-        final ImageView[] blocks = new ImageView[] {b4, b5, b6, b7, b8, b9, b10, b12, b12s, b16, b16s};
+        final ImageView[] blocks = new ImageView[] {b4, b5, b6, b7, b8, b9, b10, b12, b12s, b16, b16s, b16s};
         final int[] block = {R.drawable.fourblock, R.drawable.fiveblock, R.drawable.sixblock, R.drawable.sevenblock, R.drawable.eightblock,
             R.drawable.nineblock, R.drawable.tenblock, R.drawable.twelveblock, R.drawable.twelveblocksss, R.drawable.sixteenblocksss, R.drawable.sixteenblock};
-        final String[] answer = {"4", "5", "6", "7", "8", "9", "10", "12", "12", "16", "16"};
+        final String[] answer = {"4", "5", "6", "7", "8", "9", "10", "12", "12", "16", "16", "16"};
         final Button submit = (Button)findViewById(R.id.button4);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +93,9 @@ public class firstblock extends BaseActivity {
                     blockcount++;
                     edit.setText("");
                     pointtotal.setText("Points: " + String.valueOf(points));
+                }
+                if (blockcount == 11){
+                    startActivity(new Intent(firstblock.this, math.class));
                 }
             }
             });
