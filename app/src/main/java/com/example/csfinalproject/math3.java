@@ -26,8 +26,6 @@ public class math3 extends BaseActivity {
         pointtotal.setText("Points " + Double.toString(points));
         final TextView equationtext = (TextView) findViewById(R.id.equations);
         blockcount = 0;
-        //final int[] block = {R.drawable.fourblock, R.drawable.fiveblock, R.drawable.sixblock, R.drawable.sevenblock, R.drawable.eightblock,
-        //R.drawable.nineblock, R.drawable.tenblock, R.drawable.twelveblock, R.drawable.twelveblocksss, R.drawable.sixteenblocksss, R.drawable.sixteenblock};
         final String[] answer = {"4", "4", "3", "4", "2", "3", "6", "2", "2"};
         final String[] equations = {"(5x - 3) + 4(2x - 3) = 37", "4x + 3 = 19", "2(4x + 2) - 2 = 26", "2(3x - 3) + 7 = 25", "2x + 5 = 3 x + 3", "2x - 5 = 6x - 17",
                 "19 - 2x = 7", "4 = (2 + 3x) / 2", "4 = (2 + 3x) / 2"};

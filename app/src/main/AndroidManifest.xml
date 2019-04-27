@@ -5,49 +5,48 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".results"
-            android:label="@string/title_activity_results"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ranking"
-            android:label="@string/title_activity_ranking"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".shake"
-            android:label="@string/title_activity_shake"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".instructions"
-            android:label="@string/title_activity_instructions"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".math3"
-            android:label="@string/title_activity_math3"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".math"
-            android:label="@string/title_activity_math"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".math2"
-            android:label="@string/title_activity_math2"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".firstblock"
-            android:label="@string/title_activity_firstblock"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".spatialActivity"
-            android:label="@string/title_activity_spatial"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
