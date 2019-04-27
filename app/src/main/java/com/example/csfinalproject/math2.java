@@ -68,6 +68,7 @@ public class math2 extends BaseActivity {
                     pointto.setText("Points: " + String.valueOf(points));
                 }
                 if (blockcount == 5){
+                    //originally 5
                     startActivity(new Intent(math2.this, instructions.class));
                 }
             }

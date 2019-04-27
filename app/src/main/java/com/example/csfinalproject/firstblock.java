@@ -90,6 +90,7 @@ public class firstblock extends BaseActivity {
                     edit.setText("");
                     pointtotal.setText("Points: " + String.valueOf(points));
                 }
+                //orignaly 11
                 if (blockcount == 11){
                     startActivity(new Intent(firstblock.this, math.class));
                 }

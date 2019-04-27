@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.github.tbouron.shakedetector.library.ShakeDetector;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +20,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ShakeDetector.create(this, new ShakeDetector.OnShakeListener() {
+            @Override
+            public void OnShake() {
+
+            }
+        });
     }
     public void spatialReasoning(View view) {
         Intent spatial = new Intent(this, spatialActivity.class);

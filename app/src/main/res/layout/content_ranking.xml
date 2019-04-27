@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ranking"
+    tools:showIn="@layout/activity_ranking">
+
+    <ImageView
+        android:id="@+id/turd"
+        android:layout_width="275dp"
+        android:layout_height="291dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chuchu" />
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="350dp"
+        android:layout_height="233dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="90dp"
+        android:text="Congratulations! You are as bright as a star! A seastar. So not very bright."
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turd" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="140dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="31dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turd"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="RESTART"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

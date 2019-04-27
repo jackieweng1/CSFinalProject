@@ -19,4 +19,6 @@
     <string name="title_activity_math3">math3</string>
     <string name="title_activity_instructions">instructions</string>
     <string name="title_activity_results">results</string>
+    <string name="title_activity_shake">shake</string>
+    <string name="title_activity_ranking">ranking</string>
 </resources>
